@@ -1,0 +1,39 @@
+package it.alfasoft.fabrizio.service;
+
+import java.util.List;
+import it.alfasoft.fabrizio.bean.Rubrica;
+import it.alfasoft.fabrizio.bean.Voce;
+import it.alfasoft.fabrizio.dao.RubricaDao;
+import it.alfasoft.fabrizio.dao.VoceDao;
+
+public class ServizioRubrica {	
+
+	private VoceDao vDao = new VoceDao();
+	private RubricaDao rDao = new RubricaDao();
+
+	public Rubrica registraRubrica(String nome, String cognome) {
+		Rubrica r = new Rubrica(nome, cognome);
+		rDao.creaRubrica(r);
+		return r;
+	}
+
+	public boolean readVoce(Rubrica r, Voce v) {
+		return vDao.readVoce(r, v.getNome(), v.getCognome());
+	}
+
+	public void createVoce(Rubrica r, Voce v) {
+		vDao.creaVoce(v);
+		v.setRubrica(r);
+		r.aggiungiVoce(v);
+		vDao.updateVoce(v);
+		rDao.aggiornaRubrica(r);
+	}
+
+	public List<Voce> getAll(Rubrica r) {
+		return vDao.readAll(r);
+	}
+
+
+
+
+}
