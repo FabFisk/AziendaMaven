@@ -1,3 +1,4 @@
+<%@page import="it.alfasoft.fabrizio.bean.BustaPaga"%>
 <%@page import="java.util.List"%>
 <%@page import="it.alfasoft.fabrizio.bean.Utente"%>
 <%@page import="it.alfasoft.fabrizio.service.Gestione"%>
@@ -7,7 +8,7 @@
 	
 	<%
 		Gestione g = new Gestione();
-		List<Utente> clienti = g.getListClienti();
-		request.setAttribute("lista", clienti);	
+		//List<BustaPaga> buste = ;
+		//request.setAttribute("lista", buste);	
     %>
-    <jsp:forward page="ElencoClienti.jsp"/>
+    <jsp:forward page="ElencoBuste.jsp"/>

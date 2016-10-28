@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>	
+	pageEncoding="ISO-8859-1"%>
+	
  <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -30,11 +31,9 @@
 						<!-- Include di BREADCRUMB -->
 						<jsp:include page="../breadcrumbHTML.jsp"/>
 	    		
-					<h1>Registrazione Nuova Voce</h1>
-			<form action="addVoceCliente.jsp" method="post">
+					<h1>Cerca  Voce</h1>
+			<form action="" method="">
 				<input type="text"	name="nome" required placeholder="Nome"> 
-				<input type="text"	name="cognome" required placeholder="Cognome"> 
-				<input	type="text" name="tel" required placeholder="Teelfono">
 				<input type="submit" value="Aggiungi">
 			</form>
 			<c:out value="${msg.getMessaggio()}" />

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ page isELIgnored="false" %>
 			<!-- left menu starts -->
 			<div class="col-sm-2 col-lg-2">
 				<div class="sidebar-nav">
@@ -14,7 +15,7 @@
                    				<ul class="nav nav-pills nav-stacked">
                    					<li><a href="${pageContext.request.contextPath}/dipendente/FormNuovaVoceDipendente.jsp">Aggiungi Contatto</a></li>
 									<li><a href="${pageContext.request.contextPath}/dipendente/doElencoVoceDipendente.jsp#lista">Elenco Contatti</a></li>
-									<li><a href="${pageContext.request.contextPath}/#">Trova Contatto</a></li>
+									<li><a href="${pageContext.request.contextPath}/dipendente//TrovaContatto.jsp">Trova Contatto</a></li>
                          		</ul>
                        		</li>		
 							<li><a class="ajax-link" href="${pageContext.request.contextPath}/#"><i

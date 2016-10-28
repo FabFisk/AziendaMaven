@@ -15,7 +15,7 @@
                    				<ul class="nav nav-pills nav-stacked">
                    					<li><a href="${pageContext.request.contextPath}/cliente/FormNuovaVoceCliente.jsp">Aggiungi Contatto</a></li>
 									<li><a href="${pageContext.request.contextPath}/cliente/doElencoVoceCliente.jsp#lista">Elenco Contatti</a></li>
-									<li><a href="${pageContext.request.contextPath}/#">Trova Contatto</a></li>
+									<li><a href="${pageContext.request.contextPath}/cliente/TrovaContatto.jsp">Trova Contatto</a></li>
                          		</ul>
                        		</li>		
 							<li><a class="ajax-link" href="${pageContext.request.contextPath}/#"><i
