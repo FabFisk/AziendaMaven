@@ -33,18 +33,18 @@
 				<thead>
 					<tr>
 						<th>n°</th>
-						<th>Nome</th>
-						<th>Cognome</th>
-						<th>Telefono</th>
+						<th>Mese</th>
+						<th>Anno</th>
+						<th>Totale</th>
 					</tr>
 				</thead>
 				<c:set var="i" value="1" scope="page" />
-				<c:forEach items="${lista}" var="u">
+				<c:forEach items="${lista}" var="b">
 					<tr>
 						<td><c:out value="${i}" /></td>
-						<td><c:out value="${u.nome}" /></td>
-						<td><c:out value="${u.cognome}" /></td>
-						<td><c:out value="${u.tel}" /></td>
+						<td><c:out value="${b.mese}" /></td>
+						<td><c:out value="${b.anno}" /></td>
+						<td><c:out value="${u.totale}" /></td>
 					</tr>
 					<c:set var="i" value="${i + 1}" scope="page" />
 				</c:forEach>

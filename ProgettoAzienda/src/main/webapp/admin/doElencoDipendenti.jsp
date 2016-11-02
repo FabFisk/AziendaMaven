@@ -9,5 +9,15 @@
 		Gestione g = new Gestione();
 		List<Utente> dipendenti = g.getListDipendenti();
 		request.setAttribute("lista", dipendenti);	
+		
+		if(request.getParameter("n").equals("1")){
+	%>
+	<jsp:forward page="ElencoDipendenti.jsp"/>
+	<%		
+		}else{
+	%>
+	<jsp:forward page="RegistraBusta.jsp"/>
+	<%	
+		}
     %>
-    <jsp:forward page="ElencoDipendenti.jsp"/>
+    

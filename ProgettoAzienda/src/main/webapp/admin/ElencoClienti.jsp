@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page isELIgnored="false"%>
+<%-- <%@ page isELIgnored="false"%> --%>
 
 <jsp:useBean id="admin" class="it.alfasoft.fabrizio.bean.Admin"
 	scope="session" />
@@ -58,21 +58,13 @@
 												<td><c:out value="${u.cognome}" /></td>
 												<td><c:out value="${u.ragSociale}" /></td>
 												<td class="center">
-												<a class="btn btn-success" href="#">
-														<i class="glyphicon glyphicon-zoom-in icon-white"></i>
-														View
-												</a> 
-												<a class="btn btn-info" href="#"> <i
-														class="glyphicon glyphicon-edit icon-white"></i> Edit
-												</a> 
-												<a class="btn btn-danger" href="#"> <i
-														class="glyphicon glyphicon-trash icon-white"></i> Delete
-												</a>
-												<form action="" method="post">
-												<input type="hidden" value="${u.id_utente}">
-												<input type ="submit" class="btn btn-danger" value="Delete"><i
-														class="glyphicon glyphicon-trash icon-white"></i> 
-												</form>
+													<a class="btn btn-success" href="#"><i class="glyphicon glyphicon-zoom-in icon-white"></i> View</a> 
+													<a class="btn btn-info" href="#"><i class="glyphicon glyphicon-edit icon-white"></i> Edit</a> 
+<!-- 													<a class="btn btn-danger" href="#"> <i class="glyphicon glyphicon-trash icon-white"></i> Delete</a> -->
+													<form action="doCancellaUtente.jsp" method="post">
+													<input type="hidden" value="${u.id_utente}">
+													<input type ="submit" class="btn btn-danger" value="Delete">
+													</form>
 												</td>
 											</tr>
 											<c:set var="i" value="${i + 1}" scope="page" />

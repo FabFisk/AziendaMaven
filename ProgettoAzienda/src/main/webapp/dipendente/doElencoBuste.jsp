@@ -1,7 +1,5 @@
-<%@page import="it.alfasoft.fabrizio.bean.Rubrica"%>
+<%@page import="it.alfasoft.fabrizio.bean.BustaPaga"%>
 <%@page import="java.util.List"%>
-<%@page import="it.alfasoft.fabrizio.bean.Voce"%>
-<%@page import="it.alfasoft.fabrizio.bean.Utente"%>
 <%@page import="it.alfasoft.fabrizio.service.Gestione"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -10,7 +8,7 @@
 <jsp:useBean id="dipendente" class="it.alfasoft.fabrizio.bean.Dipendente" scope="session"/>  	
 	<%
 		Gestione g = new Gestione();	
-		List<Voce> voci = g.getAllVoci(dipendente.getRubrica());
-		request.setAttribute("lista", voci);	
+		List<BustaPaga> buste = g.getAllBuste(dipendente);
+		request.setAttribute("lista", buste);	
     %>
-    <jsp:forward page="ElencoVociDipendente.jsp"/>
+    <jsp:forward page="ElencoBuste.jsp"/>

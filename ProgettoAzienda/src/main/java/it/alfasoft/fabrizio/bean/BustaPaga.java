@@ -4,8 +4,10 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+import it.alfasoft.fabrizio.utility.Validate;
+
 @Entity
-public class BustaPaga implements Serializable {
+public class BustaPaga implements Serializable, Validate {
 
 	/**
 	 * 
@@ -72,6 +74,15 @@ public class BustaPaga implements Serializable {
 
 	public void setTotale(double totale) {
 		this.totale = totale;
+	}
+
+	public boolean isValid() {
+		boolean token = false;
+		if(!this.mese.isEmpty() && this.anno!=0
+				&& this.totale!=0){
+			token = true;
+		}
+		return token;
 	}
 	
 	

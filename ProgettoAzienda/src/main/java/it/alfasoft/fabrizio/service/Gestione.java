@@ -5,6 +5,9 @@ import java.util.List;
 
 import it.alfasoft.fabrizio.bean.*;
 import it.alfasoft.fabrizio.dao.*;
+import it.alfasoft.fabrizio.utility.Ruolo;
+import it.alfasoft.francesca.bean.UtenteBean;
+import model.Rubrica;
 
 public class Gestione {
 	
@@ -14,6 +17,7 @@ public class Gestione {
 	DipendenteDAO dDAO = new DipendenteDAO();
 	RubricaDao rDAO = new RubricaDao();
 	VoceDao vDAO = new VoceDao();	
+	BustaDAO bDAO = new BustaDAO();
 	ServizioRubrica s = new ServizioRubrica();
 	
 	public boolean existUserBoolean(String username, String password) {
@@ -112,5 +116,36 @@ public class Gestione {
 	public Rubrica trovaRubrica(Utente u){
 		Utente user = uDAO.readUserUserPsw(u.getUsername(), u.getPassword());
 		return user.getRubrica();
+	}
+	
+	public boolean eliminaUtenteById(long id) {
+		
+		Utente u = uDAO.readUser(id);
+		
+		if(u.getRuolo()==Ruolo.ADMIN){
+			return false;
+		}else {
+			Rubrica r=rDAO.readRubrica(u.getNome(), u.getCognome());
+			if(r!=null) {
+			rDAO.deleteRubrica(r);
+			}
+			return uDAO.deleteUser(u);
+		}
+	}
+	
+	public void createBusta(BustaPaga b){
+		bDAO.createBusta(b);
+	}
+	
+	public BustaPaga readBusta(String mese, int anno, Dipendente d){
+		return bDAO.readBusta(mese, anno, d);		
+	}
+	
+	public List<BustaPaga> getListBuste(){
+		return bDAO.getAll();
+	}
+	
+	public List<BustaPaga> getAllBuste(Dipendente d){
+		return bDAO.getAll(d);
 	}
 }

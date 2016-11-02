@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%-- <%@ page isELIgnored="false" %> --%>
 
 <jsp:useBean id="admin" class="it.alfasoft.fabrizio.bean.Admin" scope="session"/>
 
@@ -34,18 +33,21 @@
 						<!-- Include di BREADCRUMB -->
 						<jsp:include page="../breadcrumbHTML.jsp"/>
 							
-							<h1>Registrazione Nuovo Cliente</h1>
-							<form action="registraCliente.jsp" method="post">
-								<input type="text" name="ragSociale" required placeholder="Ragione Sociale"> 
-								<input type="text"	name="nome" required placeholder="Nome"> 
-								<input type="text"	name="cognome" required placeholder="Cognome"> 
-								<input	type="text" name="username" required placeholder="Username">
-								<input type="password" name="password" required	placeholder="Password">
-								<input type="submit" value="Registra">
-							</form>
-							<c:out value="${msg.getMessaggio()}" />
+						<h1>Registrazione Busta</h1>
+						<form action="doRegistraBusta.jsp" method="post">
+							<select name="id_dipendente">
+							<c:forEach items="${lista}" var="u">
+								<option value="${u.id_utente}"><c:out value="${u.cognome}" /> <c:out value="${u.nome}" /></option>
+						   	</c:forEach>
+						  	</select>
+							<input type="text" name="mese" required placeholder="Mese">
+							<input type="number" name="anno" required placeholder="Anno">
+							<input type="number" name="totale" required placeholder="Totale">
+							<input type="submit" value="Registra!">
+						</form>
+						<c:out value="${msg.getMessaggio()}" />
 		
-		</div>
+					</div>
 					<!-- content ends -->
     		</div>
 			<!--/fluid-row-->	

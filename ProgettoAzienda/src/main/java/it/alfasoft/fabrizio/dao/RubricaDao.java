@@ -88,5 +88,23 @@ public class RubricaDao {
 		return res;
 	}
 
+	public boolean deleteRubrica(Rubrica r) {
+		boolean res = false;
+		Session session = HibernateUtil.openSession();
+		Transaction tx = null;
+		try {
+			tx = session.getTransaction();
+			tx.begin();
+			session.delete(r);
+			tx.commit();
+			res = true;
+		} catch (Exception ex) {
+			tx.rollback();
+		} finally {
+			session.close();
+		}
+		return res;		
+	}
+
 
 }

@@ -8,7 +8,7 @@
 	
 	<%
 		Gestione g = new Gestione();
-		//List<BustaPaga> buste = ;
-		//request.setAttribute("lista", buste);	
+		List<BustaPaga> buste = g.getListBuste();		
+		request.setAttribute("lista", buste);	
     %>
     <jsp:forward page="ElencoBuste.jsp"/>

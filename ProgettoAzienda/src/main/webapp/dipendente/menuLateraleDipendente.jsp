@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <%@ page isELIgnored="false" %>
+<%--  <%@ page isELIgnored="false" %> --%>
 			<!-- left menu starts -->
 			<div class="col-sm-2 col-lg-2">
 				<div class="sidebar-nav">
@@ -18,7 +18,7 @@
 									<li><a href="${pageContext.request.contextPath}/dipendente//TrovaContatto.jsp">Trova Contatto</a></li>
                          		</ul>
                        		</li>		
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/#"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/dipendente/doElencoBuste.jsp#lista"><i
 									class="glyphicon glyphicon-euro"></i><span> Le mie buste</span></a></li>				
 						</ul>
 					</div>

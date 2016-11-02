@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <%@ page isELIgnored="false" %>
+<%--  <%@ page isELIgnored="false" %> --%>
 			<!-- left menu starts -->
 			<div class="col-sm-2 col-lg-2">
 				<div class="sidebar-nav">

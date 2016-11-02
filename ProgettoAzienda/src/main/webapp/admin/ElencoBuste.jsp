@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page isELIgnored="false"%>
+<%-- <%@ page isELIgnored="false"%> --%>
 
 <jsp:useBean id="admin" class="it.alfasoft.fabrizio.bean.Admin"
 	scope="session" />
@@ -42,11 +42,12 @@
 								<table	class="table table-striped table-bordered bootstrap-datatable datatable responsive">
 									<thead>
 										<tr>
-											<th>Username</th>
-											<th>Date registered</th>
-											<th>Role</th>
-											<th>Status</th>
-											<th>Actions</th>
+											<th>n°</th>
+											<th>Dipendente</th>
+											<th>Mese</th>
+											<th>Anno</th>
+											<th>Totale</th>
+											<th></th>
 										</tr>
 									</thead>
 									<tbody>
