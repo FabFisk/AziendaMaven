@@ -23,27 +23,27 @@
     				g.createCliente(cliente);
     				msg.successfull();
     				%>
-<jsp:forward page="RegistrazioneNuovoCliente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoCliente.jsp" />
 <%
     			}else{
     				//Username non disponibile
     				msg.notAvailable();
     				%>
-<jsp:forward page="RegistrazioneNuovoCliente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoCliente.jsp" />
 <%
     			}	
     	}else{
     		//Utente già registrato
     		msg.alreadyE();
 			%>
-<jsp:forward page="RegistrazioneNuovoCliente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoCliente.jsp" />
 <%  		
 		}
     }else{
     	//Form vuoto
     	msg.notValid();
 		%>
-<jsp:forward page="RegistrazioneNuovoCliente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoCliente.jsp" />
 <%   	
     }    
 	%>

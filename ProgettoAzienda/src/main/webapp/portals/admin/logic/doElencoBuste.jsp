@@ -11,4 +11,4 @@
 // 		List<BustaPaga> buste = g.getListBuste();		
 // 		request.setAttribute("lista", buste);	
     %>
-    <jsp:forward page="ElencoBuste.jsp"/>
+    <jsp:forward page="../view/ElencoBuste.jsp"/>

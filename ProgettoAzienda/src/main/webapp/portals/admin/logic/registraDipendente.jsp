@@ -27,27 +27,27 @@
     				g.createDip(dipendente);
     				msg.successfull();
     				%>
-<jsp:forward page="RegistrazioneNuovoDipendente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoDipendente.jsp" />
 <%
     			}else{
     				//Username non disponibile
     				msg.notAvailable();
     				%>
-<jsp:forward page="RegistrazioneNuovoDipendente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoDipendente.jsp" />
 <%
     			}	
     	}else{
     		//Utente già registrato
     		msg.alreadyE();
 			%>
-<jsp:forward page="RegistrazioneNuovoDipendente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoDipendente.jsp" />
 <%  		
 		}
     }else{
     	//Form vuoto
     	msg.notValid();
 		%>
-<jsp:forward page="RegistrazioneNuovoDipendente.jsp" />
+<jsp:forward page="../view/RegistrazioneNuovoDipendente.jsp" />
 <%   	
     }    
 	%>

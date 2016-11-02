@@ -13,11 +13,11 @@
 		
 		if(var.equals("elenco")){
 	%>
-	<jsp:forward page="ElencoDipendenti.jsp"/>
+	<jsp:forward page="../view/ElencoDipendenti.jsp"/>
 	<%		
 		}else{
 	%>
-	<jsp:forward page="RegistraBusta.jsp"/>
+	<jsp:forward page="../view/RegistraBusta.jsp"/>
 	<%	
 		}
     %>

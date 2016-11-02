@@ -10,4 +10,4 @@
 		List<Utente> clienti = g.getListClienti();
 		request.setAttribute("lista", clienti);	
     %>
-    <jsp:forward page="ElencoClienti.jsp"/>
+    <jsp:forward page="../view/ElencoClienti.jsp"/>

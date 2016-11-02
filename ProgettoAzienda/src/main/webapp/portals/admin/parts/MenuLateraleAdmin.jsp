@@ -8,19 +8,19 @@
 						<div class="nav-sm nav nav-stacked"></div>
 						<ul class="nav nav-pills nav-stacked main-menu">
 							<li class="nav-header">Main</li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/HomePageAdmin.jsp"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/view/HomePageAdmin.jsp"><i
 									class="glyphicon glyphicon-home"></i><span> Home Page</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/RegistrazioneNuovoCliente.jsp"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/view/RegistrazioneNuovoCliente.jsp"><i
 									class="glyphicon glyphicon-plus"></i><span> Aggiungi Cliente</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/doElencoClienti.jsp?#lista"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/logic/doElencoClienti.jsp?#lista"><i
 									class="glyphicon glyphicon-th-list"></i><span> Elenco Clienti</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/RegistrazioneNuovoDipendente.jsp"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/view/RegistrazioneNuovoDipendente.jsp"><i
 									class="glyphicon glyphicon-plus"></i><span> Aggiungi Dipendente</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/doElencoDipendenti.jsp?cmd=elenco&#lista"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/logic/doElencoDipendenti.jsp?cmd=elenco&#lista"><i
 									class="glyphicon glyphicon-th-list"></i><span> Elenco Dipendenti</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/doElencoDipendenti.jsp?cmd=busta&#lista"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/logic/doElencoDipendenti.jsp?cmd=busta&#lista"><i
 									class="glyphicon glyphicon-euro"></i><span> Emissione Busta</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/doElencoBuste.jsp?#lista"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/admin/logic/doElencoBuste.jsp?#lista"><i
 									class="glyphicon glyphicon-th-list"></i><span> Elenco Buste</span></a></li>				
 						</ul>
 					</div>
