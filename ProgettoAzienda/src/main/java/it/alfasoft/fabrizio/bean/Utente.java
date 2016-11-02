@@ -22,10 +22,10 @@ public class Utente implements Serializable, Validate {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	protected long id_utente;
-	protected String nome;
-	protected String cognome;
-	protected String username;
-	protected String password;
+	protected String nome = "";
+	protected String cognome = "";
+	protected String username = "";
+	protected String password = "";
 	protected Ruolo ruolo;
 	
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -99,9 +99,8 @@ public class Utente implements Serializable, Validate {
 	
 	public boolean isValidLogin() {
 		boolean token = false;
-		if(!this.username.isEmpty() && !this.password.isEmpty()
-				//&& this.ruolo.isEmpty()
-				){
+		if((!this.username.isEmpty() && this.username!=null) 
+				&& (!this.password.isEmpty() && this.password!=null)){
 			token = true;
 		}
 		return token;

@@ -17,8 +17,6 @@
 <%
 	Gestione g = new Gestione();
 
-
-	//TODO: Finire il settaggio dei bean specifcii!!!!
     if(utente.isValidLogin()){
     	//Form non vuoto
     	utente.setPassword(g.codificaPsw(utente.getPassword()));

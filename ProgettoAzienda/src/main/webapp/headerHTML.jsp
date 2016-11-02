@@ -11,7 +11,9 @@
 	<meta name="author" content="Muhammad Usman">
 	
 	<!-- The styles -->
-	<link id="bs-css" href="${pageContext.request.contextPath}/css/bootstrap-cerulean.min.css" rel="stylesheet">
+	
+	<link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<%-- 	<link id="bs-css" href="${pageContext.request.contextPath}/css/bootstrap-cerulean.min.css" rel="stylesheet"> --%>
 	<link href="${pageContext.request.contextPath}/css/charisma-app.css" rel="stylesheet">
 	<link href='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
 	<link href='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>

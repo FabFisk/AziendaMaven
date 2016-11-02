@@ -37,7 +37,7 @@
 		}
     }else{
     	//Form vuoto
-//     	msg.notValid();
+     	msg.notValid();
 		%>
 <jsp:forward page="doElencoDipendenti.jsp?cmd=busta&#lista" />
 <%   	

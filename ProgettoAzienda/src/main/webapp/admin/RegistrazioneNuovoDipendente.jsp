@@ -33,16 +33,41 @@
 						<!-- Include di BREADCRUMB -->
 						<jsp:include page="../breadcrumbHTML.jsp"/>
 							
-						<h1>Registrazione Nuovo Dipendente</h1>
-						<form action="registraDipendente.jsp" method="post">
-							<input type="text" name="nome" required placeholder="Nome">
-							<input type="text" name="cognome" required placeholder="Cognome">
-							<input type="text" name="username" required placeholder="Username">
-							<input type="password" name="password" required	placeholder="Password">
-							<input type="submit" value="Registra">
-						</form>
-						<c:out value="${msg.getMessaggio()}" />
-		
+							<div class="row">
+							    <div class="box col-md-12">
+							        <div class="box-inner">
+							            <div class="box-header well" data-original-title="">
+							            	 <h2><i class="glyphicon glyphicon-edit"></i> Registra Dipendente</h2>
+							            </div>
+							            <div class="box-content">
+							                <form role="form" action="registraDipendente.jsp" method="post">
+							                    <div class="form-group">
+							                        <label for="">Nome</label>
+							                        <input type="text" class="form-control" id="" name="nome" placeholder="Inserisci Nome">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Cognome</label>
+							                        <input type="text" class="form-control" id="" name="cognome" placeholder="Inserisci Cognome">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Username</label>
+							                        <input type="text" class="form-control" id="" name="username" placeholder="Inserisci Username">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Password</label>
+							                        <input type="text" class="form-control" id="" name="password" placeholder="Inserisci Password">
+							                    </div>
+							                    <div class="form-group">							
+							                        <p class="help-block"> <c:out value="${msg.getMessaggio()}" /></p>
+							                    </div>
+							                    <button type="submit" class="btn btn-default">Submit</button>
+							                </form>
+										</div>
+							        </div>
+							    </div>
+							    <!--/span-->
+							</div>
+							<!--/row-->		
 					</div>
 					<!-- content ends -->
     		</div>
