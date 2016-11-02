@@ -7,13 +7,12 @@
 	<title>Alfasoft Dashboard</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"
-		content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-	<meta name="author" content="Muhammad Usman">
+		content="">
+	<meta name="author" content="">
 	
 	<!-- The styles -->
 	
 	<link href="${pageContext.request.contextPath}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<%-- 	<link id="bs-css" href="${pageContext.request.contextPath}/css/bootstrap-cerulean.min.css" rel="stylesheet"> --%>
 	<link href="${pageContext.request.contextPath}/css/charisma-app.css" rel="stylesheet">
 	<link href='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
 	<link href='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
