@@ -7,8 +7,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	
 	<%
-		Gestione g = new Gestione();
-		List<BustaPaga> buste = g.getListBuste();		
-		request.setAttribute("lista", buste);	
+// 		Gestione g = new Gestione();
+// 		List<BustaPaga> buste = g.getListBuste();		
+// 		request.setAttribute("lista", buste);	
     %>
     <jsp:forward page="ElencoBuste.jsp"/>

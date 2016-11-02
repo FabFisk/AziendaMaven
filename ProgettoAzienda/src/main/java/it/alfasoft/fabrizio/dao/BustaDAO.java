@@ -9,7 +9,6 @@ import org.hibernate.Transaction;
 
 import it.alfasoft.fabrizio.bean.BustaPaga;
 import it.alfasoft.fabrizio.bean.Dipendente;
-import it.alfasoft.fabrizio.bean.Utente;
 import it.alfasoft.fabrizio.utility.HibernateUtil;
 
 public class BustaDAO {
@@ -63,7 +62,7 @@ public class BustaDAO {
 			try {
 				tx = session.getTransaction();
 				tx.begin();
-				Query query = session.createQuery("from Dipendente where dipendente=:dipInserito");
+				Query query = session.createQuery("from BustaPaga where dipendente=:dipInserito");
 				query.setLong("dipInserito", d.getId_utente());
 				buste = query.list();
 				tx.commit();
@@ -83,7 +82,7 @@ public class BustaDAO {
 			try {
 				tx = session.getTransaction();
 				tx.begin();
-				Query query = session.createQuery("from Dipendente");
+				Query query = session.createQuery("from BustaPaga");
 				buste = query.list();
 				tx.commit();
 			} catch (Exception ex) {

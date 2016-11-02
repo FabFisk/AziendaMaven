@@ -19,7 +19,7 @@ public class BustaPaga implements Serializable, Validate {
 	private long id_busta;
 	private String mese;
 	private int anno;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Dipendente dipendente;
 	private double totale;
 	

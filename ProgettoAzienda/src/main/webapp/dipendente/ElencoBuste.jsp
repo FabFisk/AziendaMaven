@@ -39,12 +39,12 @@
 					</tr>
 				</thead>
 				<c:set var="i" value="1" scope="page" />
-				<c:forEach items="${lista}" var="b">
+				<c:forEach items="${lista}" var="busta">
 					<tr>
 						<td><c:out value="${i}" /></td>
-						<td><c:out value="${b.mese}" /></td>
-						<td><c:out value="${b.anno}" /></td>
-						<td><c:out value="${u.totale}" /></td>
+						<td><c:out value="${busta.mese}" /></td>
+						<td><c:out value="${busta.anno}" /></td>
+						<td><c:out value="${busta.totale}" /></td>
 					</tr>
 					<c:set var="i" value="${i + 1}" scope="page" />
 				</c:forEach>

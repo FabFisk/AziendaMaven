@@ -25,21 +25,21 @@
     		//busta non registrata		
     				g.createBusta(busta);
     				%>
-<jsp:forward page="RegistraBusta.jsp" />
+<jsp:forward page="doElencoDipendenti.jsp?cmd=busta&#lista" />
 
 <%
     	}else{
     		//busta già registrato
 //     		msg.alreadyE();
 			%>
-<jsp:forward page="RegistrazioneNuovoCliente.jsp" />
+<jsp:forward page="doElencoDipendenti.jsp?cmd=busta&#lista" />
 <%  		
 		}
     }else{
     	//Form vuoto
 //     	msg.notValid();
 		%>
-<jsp:forward page="RegistrazioneNuovoCliente.jsp" />
+<jsp:forward page="doElencoDipendenti.jsp?cmd=busta&#lista" />
 <%   	
     }    
 %>

@@ -16,11 +16,11 @@
 									class="glyphicon glyphicon-th-list"></i><span> Elenco Clienti</span></a></li>
 							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/RegistrazioneNuovoDipendente.jsp"><i
 									class="glyphicon glyphicon-plus"></i><span> Aggiungi Dipendente</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/doElencoDipendenti.jsp?#lista&n=1"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/doElencoDipendenti.jsp?cmd=elenco&#lista"><i
 									class="glyphicon glyphicon-th-list"></i><span> Elenco Dipendenti</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/doElencoDipendenti.jsp?#lista&n=2"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/doElencoDipendenti.jsp?cmd=busta&#lista"><i
 									class="glyphicon glyphicon-euro"></i><span> Emissione Busta</span></a></li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/ElencoBuste.jsp?#lista"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/admin/doElencoBuste.jsp?#lista"><i
 									class="glyphicon glyphicon-th-list"></i><span> Elenco Buste</span></a></li>				
 						</ul>
 					</div>

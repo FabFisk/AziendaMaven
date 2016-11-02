@@ -7,10 +7,11 @@
 	
 	<%
 		Gestione g = new Gestione();
+		String var = request.getParameter("cmd");
 		List<Utente> dipendenti = g.getListDipendenti();
 		request.setAttribute("lista", dipendenti);	
 		
-		if(request.getParameter("n").equals("1")){
+		if(var.equals("elenco")){
 	%>
 	<jsp:forward page="ElencoDipendenti.jsp"/>
 	<%		

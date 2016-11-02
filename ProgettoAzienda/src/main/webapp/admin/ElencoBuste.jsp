@@ -55,7 +55,7 @@
 										<c:forEach items="${lista}" var="busta">
 											<tr>
 												<td><c:out value="${i}" /></td>
-												<td><c:out value="${busta.dipendente}" /></td>
+												<td><c:out value="${busta.dipendente.cognome}" /> <c:out value="${busta.dipendente.nome}" /></td>
 												<td><c:out value="${busta.mese}" /></td>
 												<td><c:out value="${busta.anno}" /></td>
 												<td><c:out value="${busta.totale}" /></td>

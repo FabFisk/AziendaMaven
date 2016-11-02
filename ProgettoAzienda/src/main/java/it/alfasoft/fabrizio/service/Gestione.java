@@ -6,8 +6,6 @@ import java.util.List;
 import it.alfasoft.fabrizio.bean.*;
 import it.alfasoft.fabrizio.dao.*;
 import it.alfasoft.fabrizio.utility.Ruolo;
-import it.alfasoft.francesca.bean.UtenteBean;
-import model.Rubrica;
 
 public class Gestione {
 	
