@@ -38,15 +38,14 @@
 						<div class="box-inner">
 							<div class="box-header well" data-original-title=""></div>
 							<div class="box-content">
-								<table
-									class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+								<table	class="table table-striped table-bordered bootstrap-datatable datatable responsive">
 									<thead>
 										<tr>
-											<th>Username</th>
-											<th>Date registered</th>
-											<th>Role</th>
-											<th>Status</th>
-											<th>Actions</th>
+											<th>n°</th>
+											<th>Nome</th>
+											<th>Cognome</th>
+											<th>Paga</th>
+											<th>Opzioni</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -60,7 +59,7 @@
 												<td class="center">
 													<a class="btn btn-success" href="#"><i class="glyphicon glyphicon-zoom-in icon-white"></i> View</a> 
 													<a class="btn btn-info" href="#"><i class="glyphicon glyphicon-edit icon-white"></i> Edit</a> 
-<!-- 													<a class="btn btn-danger" href="#"> <i class="glyphicon glyphicon-trash icon-white"></i> Delete</a> -->
+											<!-- 	<a class="btn btn-danger" href="#"> <i class="glyphicon glyphicon-trash icon-white"></i> Delete</a> -->
 													<form action="doCancellaUtente.jsp" method="post">
 													<input type="hidden" value="${u.id_utente}">
 													<input type ="submit" class="btn btn-danger" value="Delete">
