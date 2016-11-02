@@ -30,7 +30,7 @@
 				g.setBeanAdmin(admin);
 				
     %>
-<jsp:forward page="admin/HomePageAdmin.jsp" />
+<jsp:forward page="admin/view/HomePageAdmin.jsp" />
 <%			
 
     			break;
@@ -39,7 +39,7 @@
     			g.setBeanDipendente(dipendente);
 
     %>
-<jsp:forward page="dipendente/HomePageDipendente.jsp" />
+<jsp:forward page="dipendente/view/HomePageDipendente.jsp" />
 <%	  		
     			break;
     		case CLIENTE:
@@ -47,7 +47,7 @@
     			g.setBeanCliente(cliente);
 
     %>
-<jsp:forward page="cliente/HomePageCliente.jsp" />
+<jsp:forward page="cliente/view/HomePageCliente.jsp" />
 <%			   			
     			break;
     		}
@@ -55,14 +55,14 @@
     		//Utente non registrato
     		msg.notRegister();
     %>
-<jsp:forward page="../Login.jsp" />
+<jsp:forward page="Login.jsp" />
 <%	
     	}
     }else{
     	//Form vuoto
     	msg.notValid();
     %>
-<jsp:forward page="../Login.jsp" />
+<jsp:forward page="Login.jsp" />
 <%	
     }    
 	%>
