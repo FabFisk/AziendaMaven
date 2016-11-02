@@ -8,17 +8,17 @@
 						<div class="nav-sm nav nav-stacked"></div>
 						<ul class="nav nav-pills nav-stacked main-menu">
 							<li class="nav-header">Main</li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/dipendente/HomePageDipendente.jsp"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/dipendente/HomePageDipendente.jsp"><i
 									class="glyphicon glyphicon-home"></i><span> Home Page</span></a></li>
 							<li class="accordion"><a href="#"><i
 									class="glyphicon glyphicon-earphone"></i><span> Rubrica</span></a>
                    				<ul class="nav nav-pills nav-stacked">
-                   					<li><a href="${pageContext.request.contextPath}/dipendente/FormNuovaVoceDipendente.jsp">Aggiungi Contatto</a></li>
-									<li><a href="${pageContext.request.contextPath}/dipendente/doElencoVoceDipendente.jsp#lista">Elenco Contatti</a></li>
-									<li><a href="${pageContext.request.contextPath}/dipendente//TrovaContatto.jsp">Trova Contatto</a></li>
+                   					<li><a href="${pageContext.request.contextPath}/portals/dipendente/FormNuovaVoceDipendente.jsp">Aggiungi Contatto</a></li>
+									<li><a href="${pageContext.request.contextPath}/portals/dipendente/doElencoVoceDipendente.jsp#lista">Elenco Contatti</a></li>
+									<li><a href="${pageContext.request.contextPath}/portals/dipendente//TrovaContatto.jsp">Trova Contatto</a></li>
                          		</ul>
                        		</li>		
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/dipendente/doElencoBuste.jsp#lista"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/dipendente/doElencoBuste.jsp#lista"><i
 									class="glyphicon glyphicon-euro"></i><span> Le mie buste</span></a></li>				
 						</ul>
 					</div>

@@ -8,14 +8,14 @@
 						<div class="nav-sm nav nav-stacked"></div>
 						<ul class="nav nav-pills nav-stacked main-menu">
 							<li class="nav-header">Main</li>
-							<li><a class="ajax-link" href="${pageContext.request.contextPath}/cliente/HomePageCliente.jsp"><i
+							<li><a class="ajax-link" href="${pageContext.request.contextPath}/portals/cliente/HomePageCliente.jsp"><i
 									class="glyphicon glyphicon-home"></i><span> Home Page</span></a></li>
 							<li class="accordion"><a href="#"><i
 									class="glyphicon glyphicon-earphone"></i><span> Rubrica</span></a>
                    				<ul class="nav nav-pills nav-stacked">
-                   					<li><a href="${pageContext.request.contextPath}/cliente/FormNuovaVoceCliente.jsp">Aggiungi Contatto</a></li>
-									<li><a href="${pageContext.request.contextPath}/cliente/doElencoVoceCliente.jsp#lista">Elenco Contatti</a></li>
-									<li><a href="${pageContext.request.contextPath}/cliente/TrovaContatto.jsp">Trova Contatto</a></li>
+                   					<li><a href="${pageContext.request.contextPath}/portals/cliente/FormNuovaVoceCliente.jsp">Aggiungi Contatto</a></li>
+									<li><a href="${pageContext.request.contextPath}/portals/cliente/doElencoVoceCliente.jsp#lista">Elenco Contatti</a></li>
+									<li><a href="${pageContext.request.contextPath}/portals/cliente/TrovaContatto.jsp">Trova Contatto</a></li>
                          		</ul>
                        		</li>		
 							<li><a class="ajax-link" href="${pageContext.request.contextPath}/#"><i

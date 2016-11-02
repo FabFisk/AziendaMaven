@@ -55,14 +55,14 @@
     		//Utente non registrato
     		msg.notRegister();
     %>
-<jsp:forward page="Login.jsp" />
+<jsp:forward page="../Login.jsp" />
 <%	
     	}
     }else{
     	//Form vuoto
     	msg.notValid();
     %>
-<jsp:forward page="Login.jsp" />
+<jsp:forward page="../Login.jsp" />
 <%	
     }    
 	%>

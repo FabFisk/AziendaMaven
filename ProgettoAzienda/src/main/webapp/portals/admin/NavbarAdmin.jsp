@@ -25,7 +25,7 @@
 				<ul class="dropdown-menu">
 					<li><a href="#">Profile</a></li>
 					<li class="divider"></li>
-					<li><a href="${pageContext.request.contextPath}/doLogout.jsp">Logout</a></li>
+					<li><a href="${pageContext.request.contextPath}/portals/doLogout.jsp">Logout</a></li>
 				</ul>
 			</div>
 			<!-- user dropdown ends -->
