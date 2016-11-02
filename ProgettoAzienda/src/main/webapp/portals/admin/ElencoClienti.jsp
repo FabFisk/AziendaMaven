@@ -57,8 +57,7 @@
 												<td><c:out value="${u.nome}" /></td>
 												<td><c:out value="${u.cognome}" /></td>
 												<td><c:out value="${u.ragSociale}" /></td>
-												<td class="center">
-													<a class="btn btn-success" href="#"><i class="glyphicon glyphicon-zoom-in icon-white"></i> View</a> 
+												<td class="center"> 
 													<a class="btn btn-info" href="#"><i class="glyphicon glyphicon-edit icon-white"></i> Edit</a> 
 											<!-- 	<a class="btn btn-danger" href="#"> <i class="glyphicon glyphicon-trash icon-white"></i> Delete</a> -->
 													<form action="doCancellaUtente.jsp" method="post">

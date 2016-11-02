@@ -64,10 +64,8 @@
 												<td><c:out value="${busta.mese}" /></td>
 												<td><c:out value="${busta.anno}" /></td>
 												<td><c:out value="${busta.totale}" /></td>
-												<td class="center"><a class="btn btn-info" href="#">
-														<i class="glyphicon glyphicon-edit icon-white"></i> Edit
-												</a> <a class="btn btn-danger" href="#"> <i
-														class="glyphicon glyphicon-trash icon-white"></i> Delete
+												<td class="center"><a class="btn btn-success" href="#">
+														<i class="glyphicon glyphicon-zoom-in icon-white"></i> View
 												</a></td>
 											</tr>
 											<c:set var="i" value="${i + 1}" scope="page" />
