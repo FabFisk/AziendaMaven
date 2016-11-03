@@ -44,20 +44,20 @@
 								</h2>
 							</div>
 							<div class="box-content">
-								<form role="form" action="addVoceCliente.jsp" method="post">
+								<form role="form" action="../logic/addVoceCliente.jsp" method="post">
 									<div class="form-group">
 										<label for="">Nome</label> <input type="text"
-											class="form-control" id="" name="nome"
+											class="form-control" name="nome"
 											placeholder="Inserisci Nome">
 									</div>
 									<div class="form-group">
 										<label for="">Cognome</label> <input type="text"
-											class="form-control" id="" name="cognome"
+											class="form-control" name="cognome"
 											placeholder="Inserisci Cognome">
 									</div>
 									<div class="form-group">
 										<label for="">Telefono</label> <input type="text"
-											class="form-control" id="" name="telefono"
+											class="form-control" name="telefono"
 											placeholder="Inserisci Telefono">
 									</div>
 									<div class="form-group">
@@ -65,7 +65,7 @@
 											<c:out value="${msg.getMessaggio()}" />
 										</p>
 									</div>
-									<button type="submit" class="btn btn-default">Submit</button>
+									<input type="submit" class="btn btn-default"/ value="Submit">
 								</form>
 							</div>
 						</div>

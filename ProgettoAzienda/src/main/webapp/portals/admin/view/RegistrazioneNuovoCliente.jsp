@@ -44,7 +44,7 @@
 							            	 <h2><i class="glyphicon glyphicon-edit"></i> Registra Cliente</h2>
 							            </div>
 							            <div class="box-content">
-							                <form role="form" action="registraCliente.jsp" method="post">
+							                <form role="form" action="../logic/registraCliente.jsp" method="post">
 							                    <div class="form-group">
 							                        <label for="">Ragione Sociale</label>
 							                        <input type="text" class="form-control" id="" name="ragSociale" placeholder="Inserisci Ragione Sociale">

@@ -58,7 +58,7 @@ public class VoceDao {
 			tx = session.getTransaction();
 			tx.begin();
 			Query query = session
-					.createQuery("from Voce where nonme=:nomeInserito and cognome=:cognomeInserito and rubrica=:rubInserita");
+					.createQuery("from Voce where nome=:nomeInserito and cognome=:cognomeInserito and rubrica=:rubInserita");
 			query.setString("nomeInserito", nome);
 			query.setString("cognomeInserito", cognome);
 			query.setLong("rubInserita", r.getId_Rubrica());

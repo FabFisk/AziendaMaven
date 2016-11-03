@@ -43,7 +43,7 @@
 								</h2>
 							</div>
 							<div class="box-content">
-								<form role="form" action="addVoceDipendente.jsp" method="post">
+								<form role="form" action="../logic/addVoceDipendente.jsp" method="post">
 									<div class="form-group">
 										<label for="">Nome</label> <input type="text"
 											class="form-control" id="" name="nome"

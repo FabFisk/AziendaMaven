@@ -44,7 +44,7 @@
 								</h2>
 							</div>
 							<div class="box-content">
-								<form role="form">
+								<form role="form" method="post">
 									<div class="form-group">
 										<label for="">Nome</label> <input type="text"
 											class="form-control" id="nome" name="nome"
@@ -60,7 +60,7 @@
 											<c:out value="${msg.getMessaggio()}" />
 										</p>
 									</div>
-									<input type="button" id="button" class="btn btn-default" value="Cerca!"/>
+									<input type="button" onclick="cerca();" class="btn btn-default" value="Cerca!"/>
 								</form>
 							</div>
 						</div>
@@ -76,11 +76,23 @@
 									<i class="glyphicon glyphicon-edit"></i> Risultato
 								</h2>
 							</div>
+							
 							<div class="box-content">
-								<!-- Risultato AJAX -->
-								<!-- Risultato AJAX -->
-								<!-- Risultato AJAX -->
-								<!-- Risultato AJAX -->
+								<table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+									<thead>
+										<tr>
+											<th>n°</th>
+											<th>Nome</th>
+											<th>Cognome</th>
+											<th>Telefono</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr id="risposta">
+												
+											</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>

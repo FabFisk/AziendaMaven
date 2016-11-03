@@ -2,57 +2,45 @@
  * 
  */
 
-$(document).ready(function(){
+function cerca(){
 	
-	$("#button").click(function(){
-//		var nome = $("nome").val();
-//		var cognome = $("cognome").val();
-		alert("ciao");
-		
-	});
+	var name 	= $("#nome").val();
+	var surname = $("#cognome").val();
 	
-});
-
-
-
-//jQuery(document).ready(function() {
-//	
-//	$("#btn").click(function(){
-//			
-//	  var dataInserito=$("#txt").val();
-//	  
-//	  // parametri dentro url => http:// ...  ?matricola=valore 
-//	  var parametroInput="matricoloa="+dataInserito;
-//		  
-//	  $.ajax({	  
-//		  type: "POST", 
-//		  url : "prendiStudente",
-//		  data:parametroInput , //
-//		  dataType : "JSON" ,
-//		  
-//		  success: function(data,txtStatus,jqXHR){
-//			  /// se tutto va bene e riceviamo i dati dal server
-//			  
-//			  if(data.success){	  
-//				  $("#risposta").html("");
-//				  $("#risposta").append("<p>nome =" + data.studente.nome+"</p>");
-//				  $("#risposta").append("<p>cognome =" + data.studente.cognome+"</p>");
-//			  }else{
-//				  $("#risposta").html("");
-//				  $("#risposta").append("<p> quello studente non esiste </p>");
-//			  }
-//		  } 
-//	   ,
-//		  
-//	  error: function(jqXHR,txtStatus,erroreLanciato){
-//		  // se sucesso qualcosa 
-//		  
-//		  console.log("qualcosa e' andato male :" +txtStatus);
-//	  }
-//	  });	  
-//	//  alert(dataInserito);		
-//	});
-//});
-//
-//
-//
+	var dataInput = "nome="+name+"&cognome="+surname;
+	
+	 $.ajax({
+		  
+		  type	   : "POST", 
+		  url 	   : "../logic/trovaVoce.jsp",
+		  data	   :  dataInput, 
+		  //dataType : 'JSON' ,
+		  		  
+		  success: function(data,txtStatus,jqXHR){
+			  /// se tutto va bene e riceviamo i dati dal server
+			  
+			  if(data.success){				  
+				  $("#risposta").html("");
+				  $("#risposta").append("<td>1</td>");
+				  $("#risposta").append("<td>" + data.voce.nome+"</td>");
+				  $("#risposta").append("<td>" + data.voce.cognome+"</td>");
+				  $("#risposta").append("<td>" + data.voce.tel+"</td>");
+				  $("#risposta").append("<td class=\"center\"><a class=\"btn btn-info\" href=\"#\"><i class=\"glyphicon glyphicon-edit icon-white\"></i> Edit</a>" +
+				  											"<a class=\"btn btn-danger\" href=\"#\"><i class=\"glyphicon glyphicon-trash icon-white\"></i> Delete</a></td>");
+			  }else{
+				  $("#risposta").html("");
+				  $("#risposta").append("<td>1</td>");
+				  $("#risposta").append("<td></td>");
+				  $("#risposta").append("<td></td>");
+				  $("#risposta").append("<td></td>");
+				  $("#risposta").append("<td>Il contatto cercato non è presente in Rubrica!</td>");
+			  }
+		  } 
+	   		,
+	   	  error: function(jqXHR,txtStatus){
+		  // se sucesso qualcosa 
+		  console.log(txtStatus);		  
+	   	  }		  
+	  });
+//	alert(nome+" "+cognome);	
+}

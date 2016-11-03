@@ -43,7 +43,7 @@
 								</h2>
 							</div>
 							<div class="box-content">
-								<form role="form">
+								<form role="form" method="post">
 									<div class="form-group">
 										<label for="">Nome</label> <input type="text"
 											class="form-control" id="nome" name="nome"
@@ -59,7 +59,7 @@
 											<c:out value="${msg.getMessaggio()}" />
 										</p>
 									</div>
-									<button type="submit" id="button" class="btn btn-default">Cerca!</button>
+									<input type="button" onclick="cerca();" class="btn btn-default" value="Cerca!"/>
 								</form>
 							</div>
 						</div>
