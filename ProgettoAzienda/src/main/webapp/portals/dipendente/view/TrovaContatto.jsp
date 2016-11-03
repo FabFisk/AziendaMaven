@@ -60,7 +60,7 @@
 											<c:out value="${msg.getMessaggio()}" />
 										</p>
 									</div>
-									<button type="submit" id="cerca" class="btn btn-default">Cerca!</button>
+									<input type="button" id="button" class="btn btn-default" value="Cerca!"/>
 								</form>
 							</div>
 						</div>

@@ -36,6 +36,8 @@
 	<script src="${pageContext.request.contextPath}/js/jquery.history.js"></script>
 	<!-- application script for Charisma demo -->
 	<script src="${pageContext.request.contextPath}/js/charisma.js"></script>
+	<!-- Personal Scripts -->
+	<script src="${pageContext.request.contextPath}/js/personal.js"></script>
 
 
 </body>

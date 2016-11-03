@@ -41,8 +41,5 @@ public class ServizioRubrica {
 	public Voce readVoce(Rubrica r, String nome, String cognome) {
 		return vDao.readVoce(r, nome, cognome);
 	}
-
-
-
-
+	
 }
