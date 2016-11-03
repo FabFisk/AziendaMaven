@@ -1,6 +1,7 @@
 package it.alfasoft.fabrizio.service;
 
 import java.util.List;
+
 import it.alfasoft.fabrizio.bean.Rubrica;
 import it.alfasoft.fabrizio.bean.Voce;
 import it.alfasoft.fabrizio.dao.RubricaDao;
@@ -18,7 +19,11 @@ public class ServizioRubrica {
 	}
 
 	public boolean readVoce(Rubrica r, Voce v) {
-		return vDao.readVoce(r, v.getNome(), v.getCognome());
+		boolean token = false;
+		if(vDao.readVoce(r, v.getNome(), v.getCognome())!=null){
+			token = true;
+		}
+		return token;
 	}
 
 	public void createVoce(Rubrica r, Voce v) {
@@ -31,6 +36,10 @@ public class ServizioRubrica {
 
 	public List<Voce> getAll(Rubrica r) {
 		return vDao.readAll(r);
+	}
+
+	public Voce readVoce(Rubrica r, String nome, String cognome) {
+		return vDao.readVoce(r, nome, cognome);
 	}
 
 

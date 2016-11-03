@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false" %>
 
-<%--  <%@ page isELIgnored="false" %> --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <jsp:useBean id="dipendente"
@@ -44,15 +44,15 @@
 								</h2>
 							</div>
 							<div class="box-content">
-								<form role="form" action="" method="">
+								<form role="form">
 									<div class="form-group">
 										<label for="">Nome</label> <input type="text"
-											class="form-control" id="" name="nome"
+											class="form-control" id="nome" name="nome"
 											placeholder="Inserisci Nome">
 									</div>
 									<div class="form-group">
 										<label for="">Cognome</label> <input type="text"
-											class="form-control" id="" name="cognome"
+											class="form-control" id="cognome" name="cognome"
 											placeholder="Inserisci Cognome">
 									</div>
 									<div class="form-group">
@@ -60,7 +60,7 @@
 											<c:out value="${msg.getMessaggio()}" />
 										</p>
 									</div>
-									<button type="submit" class="btn btn-default">Cerca!</button>
+									<button type="submit" id="cerca" class="btn btn-default">Cerca!</button>
 								</form>
 							</div>
 						</div>

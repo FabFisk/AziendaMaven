@@ -50,8 +50,8 @@ public class VoceDao {
 		return v;	
 	} 
 	
-	public boolean readVoce(Rubrica r, String nome, String cognome) {
-		boolean token = false;
+	public Voce readVoce(Rubrica r, String nome, String cognome) {
+		Voce v = null;
 		Session session = HibernateUtil.openSession();
 		Transaction tx = null;
 		try{
@@ -62,17 +62,14 @@ public class VoceDao {
 			query.setString("nomeInserito", nome);
 			query.setString("cognomeInserito", cognome);
 			query.setLong("rubInserita", r.getId_Rubrica());
-			Voce v = (Voce) query.uniqueResult();
-			if(v!=null){
-				token = true;
-			}			
+			v = (Voce) query.uniqueResult();	
 			tx.commit();
 		}catch(Exception ex){
 			tx.rollback();
 		}finally{
 			session.close();
 		}	
-		return token;
+		return v;
 	}
 	
 	@SuppressWarnings("unchecked")

@@ -107,6 +107,10 @@ public class Gestione {
 		return s.readVoce(r, v);
 	}
 	
+	public Voce readVoceNomeCognome(Rubrica r, String nome, String cognome){
+		return s.readVoce(r, nome, cognome);
+	}
+	
 	public void createVoce(Rubrica r, Voce v){
 		s.createVoce(r, v);
 	}
