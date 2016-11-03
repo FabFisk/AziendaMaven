@@ -5,7 +5,8 @@
 $(document).ready(function(){
 	
 	$("#button").click(function(){
-		
+//		var nome = $("nome").val();
+//		var cognome = $("cognome").val();
 		alert("ciao");
 		
 	});
