@@ -14,7 +14,7 @@ function cerca(){
 		  type	   : "POST", 
 		  url 	   : "../logic/trovaVoce.jsp",
 		  data	   :  dataInput, 
-		  dataType : 'JSON' ,
+		  dataType : 'json' ,
 		  		  
 		  success: function(data,txtStatus,jqXHR){
 			  /// se tutto va bene e riceviamo i dati dal server
@@ -22,9 +22,9 @@ function cerca(){
 			  if(data.success){				  
 				  $("#risposta").html("");
 				  $("#risposta").append("<td>1</td>");
-				  $("#risposta").append("<td>" + data.voce.nome+"</td>");
-				  $("#risposta").append("<td>" + data.voce.cognome+"</td>");
-				  $("#risposta").append("<td>" + data.voce.tel+"</td>");
+				  $("#risposta").append("<td>" + data.nome+"</td>");
+				  $("#risposta").append("<td>" + data.cognome+"</td>");
+				  $("#risposta").append("<td>" + data.tel+"</td>");
 				  $("#risposta").append("<td class=\"center\"><a class=\"btn btn-info\" href=\"#\"><i class=\"glyphicon glyphicon-edit icon-white\"></i> Edit</a>" +
 				  											"<a class=\"btn btn-danger\" href=\"#\"><i class=\"glyphicon glyphicon-trash icon-white\"></i> Delete</a></td>");
 			  }else{

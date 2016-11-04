@@ -74,12 +74,23 @@
 								<h2>
 									<i class="glyphicon glyphicon-edit"></i> Risultato
 								</h2>
-							</div>
+							</div>							
 							<div class="box-content">
-								<!-- Risultato AJAX -->
-								<!-- Risultato AJAX -->
-								<!-- Risultato AJAX -->
-								<!-- Risultato AJAX -->
+								<table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+									<thead>
+										<tr>
+											<th>n°</th>
+											<th>Nome</th>
+											<th>Cognome</th>
+											<th>Telefono</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr id="risposta">
+												
+											</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>

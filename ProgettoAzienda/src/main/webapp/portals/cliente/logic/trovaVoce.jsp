@@ -9,19 +9,17 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<jsp:useBean id="dipendente"
-	class="it.alfasoft.fabrizio.bean.Dipendente" scope="session" />
+<jsp:useBean id="cliente"
+	class="it.alfasoft.fabrizio.bean.Cliente" scope="session" />
 
 
 <% 
 		String nome = request.getParameter("nome");
 		String cognome = request.getParameter("cognome");
-		out.println(dipendente.getCognome());
 		Gestione g = new Gestione();
-		Gson gson=new Gson();
-		JsonObject jobj= new JsonObject();
-		System.out.println(dipendente.getCognome());
-		Voce v = g.readVoceNomeCognome(dipendente.getRubrica(), nome, cognome);
+		Gson gson = new Gson();
+		JsonObject jobj = new JsonObject();
+		Voce v = g.readVoceNomeCognome(cliente.getRubrica(), nome, cognome);
 		JsonElement voceJson = gson.toJsonTree(v);
 		
 		if(v == null){

@@ -75,8 +75,7 @@
 								<h2>
 									<i class="glyphicon glyphicon-edit"></i> Risultato
 								</h2>
-							</div>
-							
+							</div>							
 							<div class="box-content">
 								<table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
 									<thead>

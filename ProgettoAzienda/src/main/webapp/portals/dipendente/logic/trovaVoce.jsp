@@ -16,10 +16,9 @@
 <% 
 		String nome = request.getParameter("nome");
 		String cognome = request.getParameter("cognome");
-		out.println(dipendente.getCognome());
 		Gestione g = new Gestione();
-		Gson gson=new Gson();
-		JsonObject jobj= new JsonObject();
+		Gson gson = new Gson();
+		JsonObject jobj = new JsonObject();
 		Voce v = g.readVoceNomeCognome(dipendente.getRubrica(), nome, cognome);
 		JsonElement voceJson = gson.toJsonTree(v);
 		
