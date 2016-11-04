@@ -14,7 +14,7 @@ function cerca(){
 		  type	   : "POST", 
 		  url 	   : "../logic/trovaVoce.jsp",
 		  data	   :  dataInput, 
-		  //dataType : 'JSON' ,
+		  dataType : 'JSON' ,
 		  		  
 		  success: function(data,txtStatus,jqXHR){
 			  /// se tutto va bene e riceviamo i dati dal server

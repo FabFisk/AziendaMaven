@@ -67,11 +67,14 @@
 												<td><c:out value="${u.nome}" /></td>
 												<td><c:out value="${u.cognome}" /></td>
 												<td><c:out value="${u.tel}" /></td>
-												<td class="center"><a class="btn btn-info" href="#">
-														<i class="glyphicon glyphicon-edit icon-white"></i> Edit
-												</a> <a class="btn btn-danger" href="#"> <i
-														class="glyphicon glyphicon-trash icon-white"></i> Delete
-												</a></td>
+												<td class="center"> 
+													<a class="btn btn-info" href="#"><i class="glyphicon glyphicon-edit icon-white"></i> Edit</a> 
+											<!-- 	<a class="btn btn-danger" href="#"> <i class="glyphicon glyphicon-trash icon-white"></i> Delete</a> -->
+													<form action="../logic/doCancellaVoce.jsp" method="post">
+													<input type="hidden" value="${u.id_voce}" name="id_voce">
+													<input type ="submit" class="btn btn-danger" value="Delete">
+													</form>
+												</td>
 											</tr>
 											<c:set var="i" value="${i + 1}" scope="page" />
 										</c:forEach>

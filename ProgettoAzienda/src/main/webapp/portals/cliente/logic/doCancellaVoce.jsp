@@ -9,18 +9,10 @@
 
 <%
 Gestione g= new Gestione();
-long id = Long.parseLong(request.getParameter("id_utente"));
 
-if(g.checkRuolo(id)==Ruolo.CLIENTE){
-	
-	g.eliminaUtenteById(id);
-	response.sendRedirect("doElencoClienti.jsp?#lista");
-	
-}else if(g.checkRuolo(id)==Ruolo.DIPENDENTE){
-	
-	g.eliminaUtenteById(id);
-	response.sendRedirect("doElencoDipendenti.jsp?cmd=elenco&#lista");
-	
-}
+long id = Long.parseLong(request.getParameter("id_voce"));
 
+g.eliminaVoceById(id);
+response.sendRedirect("doElencoVoceDipendente.jsp#lista");
+	
 %>

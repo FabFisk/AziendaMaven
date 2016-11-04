@@ -38,8 +38,13 @@ public class ServizioRubrica {
 		return vDao.readAll(r);
 	}
 
-	public Voce readVoce(Rubrica r, String nome, String cognome) {
+	public Voce readVoceNomeCognome(Rubrica r, String nome, String cognome) {
 		return vDao.readVoce(r, nome, cognome);
+	}
+
+	public boolean eliminaVoce(long id) {
+		Voce v = vDao.readVoce(id);
+		return vDao.deleteVoce(v);
 	}
 	
 }

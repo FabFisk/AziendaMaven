@@ -108,16 +108,25 @@ public class Gestione {
 	}
 	
 	public Voce readVoceNomeCognome(Rubrica r, String nome, String cognome){
-		return s.readVoce(r, nome, cognome);
+		return s.readVoceNomeCognome(r, nome, cognome);
 	}
 	
 	public void createVoce(Rubrica r, Voce v){
 		s.createVoce(r, v);
 	}
 	
+	public boolean eliminaVoceById(long id){
+		return s.eliminaVoce(id);
+	}
+	
 	public Rubrica trovaRubrica(Utente u){
 		Utente user = uDAO.readUserUserPsw(u.getUsername(), u.getPassword());
 		return user.getRubrica();
+	}
+	
+	public Ruolo checkRuolo(long id){
+		Utente u = uDAO.readUser(id);
+		return u.getRuolo();
 	}
 	
 	public boolean eliminaUtenteById(long id) {

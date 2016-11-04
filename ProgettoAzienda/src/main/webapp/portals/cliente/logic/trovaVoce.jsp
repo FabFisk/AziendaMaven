@@ -20,6 +20,7 @@
 		Gestione g = new Gestione();
 		Gson gson=new Gson();
 		JsonObject jobj= new JsonObject();
+		System.out.println(dipendente.getCognome());
 		Voce v = g.readVoceNomeCognome(dipendente.getRubrica(), nome, cognome);
 		JsonElement voceJson = gson.toJsonTree(v);
 		
