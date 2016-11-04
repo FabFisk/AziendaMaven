@@ -57,15 +57,15 @@
 								                </div>
 							                    <div class="form-group">
 							                        <label for="">Mese</label>
-							                        <input type="text" class="form-control" id="" name="mese" placeholder="Inserisci Cognome">
+							                        <input type="text" class="form-control" id="" name="mese" placeholder="Inserisci Mese">
 							                    </div>
 							                    <div class="form-group">
 							                        <label for="">Anno</label>
-							                        <input type="number" class="form-control" id="" name="anno" placeholder="Inserisci Username">
+							                        <input type="number" class="form-control" id="" name="anno" placeholder="Inserisci Anno">
 							                    </div>
 							                    <div class="form-group">
 							                        <label for="">Totale</label>
-							                        <input type="number" class="form-control" id="" name="totale" placeholder="Inserisci Password">
+							                        <input type="number" class="form-control" id="" name="totale" placeholder="Inserisci Totale">
 							                    </div>
 							                    <div class="form-group">							
 							                        <p class="help-block"> <c:out value="${msg.getMessaggio()}" /></p>

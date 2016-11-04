@@ -44,7 +44,7 @@
 							            	 <h2><i class="glyphicon glyphicon-edit"></i> Registra Dipendente</h2>
 							            </div>
 							            <div class="box-content">
-							                <form role="form" action="registraDipendente.jsp" method="post">
+							                <form role="form" action="../logic/registraDipendente.jsp" method="post">
 							                    <div class="form-group">
 							                        <label for="">Nome</label>
 							                        <input type="text" class="form-control" id="" name="nome" placeholder="Inserisci Nome">
