@@ -61,11 +61,13 @@
 												<td><c:out value="${u.cognome}" /></td>
 												<td><c:out value="${u.ragSociale}" /></td>
 												<td class="center"> 
-													<a class="btn btn-info" href="#"><i class="glyphicon glyphicon-edit icon-white"></i> Edit</a> 
-											<!-- 	<a class="btn btn-danger" href="#"> <i class="glyphicon glyphicon-trash icon-white"></i> Delete</a> -->
+													<form action="../logic/editCliente.jsp" method="post">
+														<input type="hidden" value="${u.id_utente}" name="id_utente">
+														<input type ="submit" class="btn btn-info" value="Edit">
+													</form> 
 													<form action="../logic/doCancellaUtente.jsp" method="post">
-													<input type="hidden" value="${u.id_utente}" name="id_utente">
-													<input type ="submit" class="btn btn-danger" value="Delete">
+														<input type="hidden" value="${u.id_utente}" name="id_utente">
+														<input type ="submit" class="btn btn-danger" value="Delete">
 													</form>
 												</td>
 											</tr>

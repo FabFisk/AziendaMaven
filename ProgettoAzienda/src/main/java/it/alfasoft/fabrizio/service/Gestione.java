@@ -45,6 +45,14 @@ public class Gestione {
 		dDAO.fillDatiDipendente(d);
 	}
 	
+	public boolean readClienteId(long id){
+		return cDAO.readUser(id) != null;		
+	}
+	
+	public boolean readDipendenteId(long id){
+		return dDAO.readUser(id) != null;		
+	}
+	
 	public Utente readUserUserPsw(String username, String password){
 		return uDAO.readUserUserPsw(username, password);
 	}
@@ -158,5 +166,13 @@ public class Gestione {
 	
 	public List<BustaPaga> getAllBuste(Dipendente d){
 		return bDAO.getAll(d);
+	}
+	
+	public void updateCliente(Cliente c){
+		cDAO.updateUser(c);
+	}
+	
+	public void updateDipendente(Dipendente d){
+		dDAO.updateUser(d);
 	}
 }

@@ -89,9 +89,7 @@ public class Utente implements Serializable, Validate {
 	public boolean isValid() {
 		boolean token = false;
 		if(!this.nome.isEmpty() && !this.cognome.isEmpty()
-				&& !this.username.isEmpty() && !this.password.isEmpty()
-				//&& this.ruolo!=null
-				){
+				&& !this.username.isEmpty() && !this.password.isEmpty()){
 			token = true;
 		}
 		return token;
