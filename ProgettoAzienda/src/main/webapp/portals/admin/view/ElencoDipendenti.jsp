@@ -60,7 +60,7 @@
 												<td><c:out value="${u.cognome}" /></td>
 												<td><c:out value="${u.stipendio}" /></td>
 												<td class="center"> 
-													<form action="../logic/editDipendente.jsp" method="post">
+													<form action="../logic/editUtente.jsp" method="post">
 														<input type="hidden" value="${u.id_utente}" name="id_utente">
 														<input type ="submit" class="btn btn-info" value="Edit">
 													</form> 

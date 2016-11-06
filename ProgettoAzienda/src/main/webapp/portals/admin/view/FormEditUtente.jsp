@@ -1,3 +1,5 @@
+<%@page import="it.alfasoft.fabrizio.bean.Dipendente"%>
+<%@page import="it.alfasoft.fabrizio.service.Gestione"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -5,6 +7,7 @@
 
 <jsp:useBean id="admin" class="it.alfasoft.fabrizio.bean.Admin" scope="session"/>
 
+<jsp:useBean id="cliente" class="it.alfasoft.fabrizio.bean.Cliente" scope="request"/> 
 <jsp:useBean id="dipendente" class="it.alfasoft.fabrizio.bean.Dipendente" scope="request"/>   
 
 <jsp:useBean id="msg" class="it.alfasoft.fabrizio.service.Messaggio"
@@ -22,6 +25,7 @@
 	<!-- Include di NAVBAR -->
 	<jsp:include page="../parts/NavbarAdmin.jsp"/>
 <%
+		Gestione g = new Gestione();
     	if(admin.isValid()){
     		
     %>			
@@ -47,7 +51,44 @@
 							            	 <h2><i class="glyphicon glyphicon-edit"></i> Aggiorna</h2>
 							            </div>
 							            <div class="box-content">
-							            	<form role="form" action="../logic/doEditDipendente.jsp" method="post">	
+							            <%
+							            	if(cliente.isValid()){
+							            %>
+											<form role="form" action="../logic/doEditUtente.jsp" method="post">
+							                	<div class="form-group hidden">
+							                        <label for="">Id Cliente</label>
+							                        <input type="text" class="form-control" id="" name="id_utente" value="<%=cliente.getId_utente()%>">
+							                    </div>
+							                    <div class="form-group hidden">
+							                        <label for="">ruolo</label>
+							                        <input type="text" class="form-control" id="" name="ruolo" value="<%=cliente.getRuolo()%>">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Ragione Sociale</label>
+							                        <input type="text" class="form-control" id="" name="ragSociale" value="<%=cliente.getRagSociale()%>">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Nome</label>
+							                        <input type="text" class="form-control" id="" name="nome" value="<%=cliente.getNome()%>">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Cognome</label>
+							                        <input type="text" class="form-control" id="" name="cognome" value="<%=cliente.getCognome()%>">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Username</label>
+							                        <input type="text" class="form-control" id="" name="username" value="<%=cliente.getUsername()%>">
+							                    </div>
+							                    <div class="form-group">
+							                        <label for="">Password</label>
+							                        <input type="password" class="form-control" id="" name="password" required>
+							                    </div>
+							                    <button type="submit" class="btn btn-default">Submit</button>
+							                </form>
+							             <%
+							            	}else if(dipendente.isValid()){
+							              %> 		
+							            	<form role="form" action="../logic/doEditUtente.jsp" method="post">	
 							            		<div class="form-group hidden">
 							                        <label for="">Id Cliente</label>
 							                        <input type="text" class="form-control" id="" name="id_utente" value="<%=dipendente.getId_utente()%>">
@@ -70,10 +111,14 @@
 							                    </div>
 							                    <div class="form-group">
 							                        <label for="">Password</label>
-							                        <input type="password" class="form-control" id="" name="password" value="<%=dipendente.getPassword()%>">
+							                        <input type="password" class="form-control" id="" name="password" required>
 							                    </div>
 							                    <button type="submit" class="btn btn-default">Submit</button>
-							                </form>
+							                </form>	
+							             <%		
+							            	}
+							              %>   
+							                
 										</div>
 							        </div>
 							    </div>
