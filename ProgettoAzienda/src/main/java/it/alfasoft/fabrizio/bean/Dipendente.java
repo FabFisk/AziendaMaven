@@ -21,7 +21,7 @@ public class Dipendente extends Utente implements Serializable {
 	private double stipendio;
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "dipendente", cascade = CascadeType.ALL)
 	@NotFound(action = NotFoundAction.IGNORE)
-	private Set<BustaPaga> buste = new HashSet<BustaPaga>();
+	private Set<BustaPagaOld> buste = new HashSet<BustaPagaOld>();
 	
 	public Dipendente(){
 		super();

@@ -152,19 +152,19 @@ public class Gestione {
 		}
 	}
 	
-	public void createBusta(BustaPaga b){
+	public void createBusta(BustaPagaOld b){
 		bDAO.createBusta(b);
 	}
 	
-	public BustaPaga readBusta(String mese, int anno, Dipendente d){
+	public BustaPagaOld readBusta(String mese, int anno, Dipendente d){
 		return bDAO.readBusta(mese, anno, d);		
 	}
 	
-	public List<BustaPaga> getListBuste(){
+	public List<BustaPagaOld> getListBuste(){
 		return bDAO.getAll();
 	}
 	
-	public List<BustaPaga> getAllBuste(Dipendente d){
+	public List<BustaPagaOld> getAllBuste(Dipendente d){
 		return bDAO.getAll(d);
 	}
 	

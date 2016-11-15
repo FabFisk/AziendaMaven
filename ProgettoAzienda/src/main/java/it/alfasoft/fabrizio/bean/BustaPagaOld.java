@@ -7,7 +7,7 @@ import javax.persistence.*;
 import it.alfasoft.fabrizio.utility.Validate;
 
 @Entity
-public class BustaPaga implements Serializable, Validate {
+public class BustaPagaOld implements Serializable, Validate {
 
 	/**
 	 * 
@@ -23,13 +23,13 @@ public class BustaPaga implements Serializable, Validate {
 	private Dipendente dipendente;
 	private double totale;
 	
-	public BustaPaga() {
+	public BustaPagaOld() {
 		this.mese = "";
 		this.anno = 0;
 		this.totale = 0.0;
 	}
 	
-	public BustaPaga(String mese, int anno, Dipendente d, double tot){
+	public BustaPagaOld(String mese, int anno, Dipendente d, double tot){
 		this.mese = mese;
 		this.anno = anno;
 		this.dipendente = d;

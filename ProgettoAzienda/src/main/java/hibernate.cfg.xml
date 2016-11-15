@@ -41,6 +41,6 @@
 		<mapping class="it.alfasoft.fabrizio.bean.Cliente" />			
 		<mapping class="it.alfasoft.fabrizio.bean.Rubrica" />			
 		<mapping class="it.alfasoft.fabrizio.bean.Voce" />	
-		<mapping class="it.alfasoft.fabrizio.bean.BustaPaga" />	
+		<mapping class="it.alfasoft.fabrizio.bean.BustaPagaOld" />	
 	</session-factory>
 </hibernate-configuration>
