@@ -8,7 +8,7 @@
 
 <jsp:useBean id="admin" class="it.alfasoft.fabrizio.bean.Admin" scope="session"/>
 
-<jsp:useBean id="busta" class="it.alfasoft.fabrizio.bean.BustaPaga" scope="request" />
+<jsp:useBean id="busta" class="it.alfasoft.fabrizio.bean.BustaPagaOld" scope="request" />
 <jsp:setProperty property="*" name="busta" />
 
 <jsp:useBean id="msg" class="it.alfasoft.fabrizio.service.Messaggio" scope="request" />

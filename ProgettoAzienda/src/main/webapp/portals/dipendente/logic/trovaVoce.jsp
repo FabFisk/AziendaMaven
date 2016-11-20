@@ -1,7 +1,7 @@
-<%@page import="com.google.gson.JsonElement"%>
+<%@page import="it.alfasoft.fabrizio.dao.VoceDao"%>
+<%@page import="org.json.JSONArray"%>
+<%@page import="org.json.JSONObject"%>
 <%@page import="it.alfasoft.fabrizio.bean.Voce"%>
-<%@page import="com.google.gson.JsonObject"%>
-<%@page import="com.google.gson.Gson"%>
 <%@page import="it.alfasoft.fabrizio.service.Gestione"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -17,16 +17,26 @@
 		String nome = request.getParameter("nome");
 		String cognome = request.getParameter("cognome");
 		Gestione g = new Gestione();
-		Gson gson = new Gson();
-		JsonObject jobj = new JsonObject();
-		Voce v = g.readVoceNomeCognome(dipendente.getRubrica(), nome, cognome);
-		JsonElement voceJson = gson.toJsonTree(v);
+		JSONObject jobj = new JSONObject();
+		JSONArray jArray = new JSONArray();
 		
-		if(v == null){
-			jobj.addProperty("success",false);
-		}else{
-			jobj.addProperty("success",true);
+		Voce v = g.readVoceNomeCognome(dipendente.getRubrica(), nome, cognome);
+		
+		jobj.put("nome", v.getNome());
+		jobj.put("cognome", v.getCognome());
+		jobj.put("telefono", v.getTel());
+		jArray.put(jobj);
+		
+		jobj.put("success", false);
+		
+		if(v != null){
+			jobj.put("success", true);
 		}
-		jobj.add("voce", voceJson);
-
+		
+		jobj.put("voci", jArray);
+		
+ 		System.out.print(jobj.toString());
+  		response.setContentType("application/json");
+  		response.getWriter().write(jobj.toString());
+		
 %>

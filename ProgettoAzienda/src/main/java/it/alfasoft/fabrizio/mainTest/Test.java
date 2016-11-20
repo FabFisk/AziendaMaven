@@ -1,5 +1,10 @@
 package it.alfasoft.fabrizio.mainTest;
 
+import it.alfasoft.fabrizio.bean.Admin;
+import it.alfasoft.fabrizio.dao.AdminDAO;
+import it.alfasoft.fabrizio.service.Gestione;
+import it.alfasoft.fabrizio.utility.Ruolo;
+
 
 public class Test {
 
